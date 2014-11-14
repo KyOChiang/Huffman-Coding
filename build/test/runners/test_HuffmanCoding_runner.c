@@ -30,7 +30,9 @@ char* GlobalOrderError;
 //=======External Functions This Runner Calls=====
 extern void setUp(void);
 extern void tearDown(void);
-extern void test_module_generator_needs_to_be_implemented(void);
+extern void test_runLengthEncoding_to_encode_lengthy_value(void);
+extern void test_runLengthEncoding_to_encode_lengthy_value_case_2(void);
+extern void test_runLengthEncoding_to_encode_lengthy_value_case_3(void);
 
 
 //=======Test Reset Option=====
@@ -45,7 +47,9 @@ void resetTest()
 int main(void)
 {
   UnityBegin("test_HuffmanCoding.c");
-  RUN_TEST(test_module_generator_needs_to_be_implemented, 12);
+  RUN_TEST(test_runLengthEncoding_to_encode_lengthy_value, 8);
+  RUN_TEST(test_runLengthEncoding_to_encode_lengthy_value_case_2, 27);
+  RUN_TEST(test_runLengthEncoding_to_encode_lengthy_value_case_3, 54);
 
   return (UnityEnd());
 }
