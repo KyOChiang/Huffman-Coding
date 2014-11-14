@@ -20,6 +20,17 @@ void runLengthEncoding(int* dataIn, int* dataOut, int size){
 			sum = 1; i += 1; j += 1;
 		}
 	}
-	printf("\n");
-	dumpArray(dataOut,20);
+}
+
+void runLengthDecoding(int* dataIn, int* dataOut, int size){
+	int i = 0, j = 0, repeatNo = 0;
+	
+	while(i != size){
+		repeatNo = dataIn[i];
+		i += 1;
+		while(repeatNo != 0){
+			dataOut[j] = dataIn[i];
+			j += 1; repeatNo -= 1;
+		}i += 1;
+	}
 }

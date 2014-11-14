@@ -77,3 +77,21 @@ void test_runLengthEncoding_to_encode_lengthy_value_case_3(void){
 	TEST_ASSERT_EQUAL(1,output[18]);
 	TEST_ASSERT_EQUAL(2,output[19]);
 }
+
+void test_runLengthDecoding_to_decode_encode_value_into_original_value_and_sequence(void){
+	int size = 12;
+	int input[12] = {2,5,1,66,1,21,1,1,4,0,1,2};
+	int output[20] = {0};
+	runLengthDecoding(input,output,size);
+	TEST_ASSERT_EQUAL(5,output[0]);
+	TEST_ASSERT_EQUAL(5,output[1]);
+	TEST_ASSERT_EQUAL(66,output[2]);
+	TEST_ASSERT_EQUAL(21,output[3]);
+	TEST_ASSERT_EQUAL(1,output[4]);
+	TEST_ASSERT_EQUAL(0,output[5]);
+	TEST_ASSERT_EQUAL(0,output[6]);
+	TEST_ASSERT_EQUAL(0,output[7]);
+	TEST_ASSERT_EQUAL(0,output[8]);
+	TEST_ASSERT_EQUAL(2,output[9]);
+}
+

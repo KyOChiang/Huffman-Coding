@@ -33,6 +33,7 @@ extern void tearDown(void);
 extern void test_runLengthEncoding_to_encode_lengthy_value(void);
 extern void test_runLengthEncoding_to_encode_lengthy_value_case_2(void);
 extern void test_runLengthEncoding_to_encode_lengthy_value_case_3(void);
+extern void test_runLengthDecoding_to_decode_encode_value_into_original_value_and_sequence(void);
 
 
 //=======Test Reset Option=====
@@ -50,6 +51,7 @@ int main(void)
   RUN_TEST(test_runLengthEncoding_to_encode_lengthy_value, 8);
   RUN_TEST(test_runLengthEncoding_to_encode_lengthy_value_case_2, 27);
   RUN_TEST(test_runLengthEncoding_to_encode_lengthy_value_case_3, 54);
+  RUN_TEST(test_runLengthDecoding_to_decode_encode_value_into_original_value_and_sequence, 81);
 
   return (UnityEnd());
 }

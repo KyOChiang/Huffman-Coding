@@ -153,3 +153,37 @@ void test_runLengthEncoding_to_encode_lengthy_value_case_3(void){
  UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((output[19])), (((void *)0)), (_U_UINT)78, UNITY_DISPLAY_STYLE_INT);
 
 }
+
+
+
+void test_runLengthDecoding_to_decode_encode_value_into_original_value_and_sequence(void){
+
+ int size = 12;
+
+ int input[12] = {2,5,1,66,1,21,1,1,4,0,1,2};
+
+ int output[20] = {0};
+
+ runLengthDecoding(input,output,size);
+
+ UnityAssertEqualNumber((_U_SINT)((5)), (_U_SINT)((output[0])), (((void *)0)), (_U_UINT)86, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((5)), (_U_SINT)((output[1])), (((void *)0)), (_U_UINT)87, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((66)), (_U_SINT)((output[2])), (((void *)0)), (_U_UINT)88, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((21)), (_U_SINT)((output[3])), (((void *)0)), (_U_UINT)89, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((1)), (_U_SINT)((output[4])), (((void *)0)), (_U_UINT)90, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((output[5])), (((void *)0)), (_U_UINT)91, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((output[6])), (((void *)0)), (_U_UINT)92, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((output[7])), (((void *)0)), (_U_UINT)93, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((0)), (_U_SINT)((output[8])), (((void *)0)), (_U_UINT)94, UNITY_DISPLAY_STYLE_INT);
+
+ UnityAssertEqualNumber((_U_SINT)((2)), (_U_SINT)((output[9])), (((void *)0)), (_U_UINT)95, UNITY_DISPLAY_STYLE_INT);
+
+}
